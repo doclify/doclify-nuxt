@@ -1,0 +1,59 @@
+{
+  "name": "@doclify/nuxt",
+  "version": "1.0.0",
+  "description": "Doclify module for Nuxt.js",
+  "main": "lib/module.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doclify/doclify-nuxt.git"
+  },
+  "homepage": "https://github.com/doclify/doclify-nuxt#readme",
+  "author": "Andrej Adamcik",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "nuxt test/fixture",
+    "lint": "eslint lib test",
+    "test": "yarn lint && jest",
+    "release": "bash scripts/release.sh"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "doclify",
+    "javascript",
+    "nuxt",
+    "nuxt.js",
+    "vue",
+    "vue.js"
+  ],
+  "dependencies": {
+    "@doclify/javascript": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@nuxtjs/eslint-config": "latest",
+    "axios": "^0.19.2",
+    "babel-eslint": "latest",
+    "babel-jest": "latest",
+    "codecov": "latest",
+    "dotenv": "^8.2.0",
+    "eslint": "latest",
+    "eslint-config-standard": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-jest": "latest",
+    "eslint-plugin-node": "latest",
+    "eslint-plugin-promise": "latest",
+    "eslint-plugin-standard": "latest",
+    "eslint-plugin-vue": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "nuxt-edge": "latest"
+  }
+}
