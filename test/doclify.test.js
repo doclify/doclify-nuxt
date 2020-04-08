@@ -37,54 +37,6 @@ const testSuite = () => {
       expect(html).toContain('collectionbbb')
     })
   })
-
-  // test('init', async () => {
-  //   const window = await nuxt.renderAndGetWindow(url('/mounted'))
-  //   window.onNuxtReady(() => {
-  //     const $axios = window.$nuxt.$axios
-  //     expect($axios.defaults.xsrfHeaderName).toBe('X-CSRF-TOKEN')
-  //   })
-  // })
-
-  // test('createCopy', async () => {
-  //   const window = await nuxt.renderAndGetWindow(url('/mounted'))
-  //   window.onNuxtReady(() => {
-  //     const $axios = window.$nuxt.$axios
-  //     const newInstance = $axios.create()
-  //     expect(newInstance.defaults.xsrfHeaderName).toBe('X-CSRF-TOKEN')
-  //   })
-  // })
-
-  // test('ssr', async () => {
-  //   const makeReq = login => axios
-  //     .get(url('/ssr' + (login ? '?login' : '')))
-  //     .then(r => r.data)
-  //     .then(h => /session-[0-9]+/.exec(h))
-  //     .then(m => (m && m[0] ? m[0] : null))
-
-  //   const a = await makeReq()
-  //   const b = await makeReq(true)
-  //   const c = await makeReq()
-  //   const d = await makeReq(true)
-
-  //   expect(a).toBeNull()
-  //   expect(b).not.toBeNull()
-  //   expect(c).toBeNull() // Important!
-  //   expect(d).not.toBeNull()
-  //   expect(b).not.toBe(d)
-  // })
-
-  // test('ssr no brotli', async () => {
-  //   const makeReq = login => axios
-  //     .get(url('/ssr' + (login ? '?login' : '')))
-  //     .then(r => r.data)
-  //     .then(h => /encoding-\$(.*)\$/.exec(h))
-  //     .then(m => (m && m[1] ? m[1] : null))
-
-  //   const result = await makeReq()
-
-  //   expect(result).toBe('gzip, deflate')
-  // })
 }
 
 describe('module', () => {
