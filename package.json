@@ -1,6 +1,6 @@
 {
   "name": "@doclify/nuxt",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Doclify module for Nuxt.js",
   "main": "lib/module.js",
   "repository": {
