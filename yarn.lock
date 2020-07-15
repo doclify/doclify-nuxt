@@ -950,10 +950,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@doclify/javascript@^2.0.6":
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/@doclify/javascript/-/javascript-2.0.6.tgz#998e2b79a6dd014004910daf726a685cfb6c209d"
-  integrity sha512-dzTROQa82eVA5oSezDb13sfG72PEqYfVR16bsucWD6NlW85l3SdptJJWFcWvugtsSa1DnVYFUTek10JM1QARMg==
+"@doclify/javascript@^2.0.12":
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/@doclify/javascript/-/javascript-2.0.12.tgz#c917394957efe549a6645a49985e2f0f6188e273"
+  integrity sha512-xDiNBAiwZG1MsUd72t3eVYAtTDjtoUvJ4qN9cGGfz05gYhlGV7XVqGwRF+6wktbegM05f7ax8ljvLmGLzU/KZw==
   dependencies:
     axios ">=0.19.2"
 
