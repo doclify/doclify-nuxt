@@ -15,6 +15,11 @@ module.exports = {
   doclify: {
     proxy: true,
     repository: process.env.DOCLIFY_REPOSITORY,
-    key: process.env.DOCLIFY_KEY
+    key: process.env.DOCLIFY_KEY,
+    cache: true
+  },
+  privateRuntimeConfig: {
+    DOCLIFY_REPOSITORY: process.env.DOCLIFY_REPOSITORY,
+    DOCLIFY_KEY: process.env.DOCLIFY_KEY
   }
 }

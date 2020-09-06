@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "nuxt test/fixture",
     "lint": "eslint lib test",
-    "test": "yarn lint && jest",
+    "test": "npm run lint && jest",
     "release": "bash scripts/release.sh"
   },
   "files": [
@@ -31,7 +31,8 @@
     "vue.js"
   ],
   "dependencies": {
-    "@doclify/javascript": "^2.0.12"
+    "@doclify/javascript": "^3.0.4",
+    "@doclify/lru-cache": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "latest",
