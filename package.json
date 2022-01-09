@@ -31,7 +31,7 @@
     "vue.js"
   ],
   "dependencies": {
-    "@doclify/javascript": "^3.0.4",
+    "@doclify/javascript": "^3.0.6",
     "@doclify/lru-cache": "^1.0.0"
   },
   "devDependencies": {
