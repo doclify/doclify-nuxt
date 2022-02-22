@@ -1,30 +1,24 @@
-<p align="center">
-  <a href="https://doclify.io" target="_blank" rel="noopener noreferrer">
-    <img src="https://doclify.io/icon.png" width="128" alt="Doclify Logo" />
-  </a>
-</p>
+# @doclify/nuxt
 
-<h1 align="center">
-  Doclify Nuxt Module
-</h1>
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Codecov][codecov-src]][codecov-href]
+[![License][license-src]][license-href]
 
-<h3 align="center">
-  <a href="https://doclify.io">Website</a> •
-  <a href="https://docs.doclify.io/api/">Docs</a>
-</h3>
+> [Doclify](https://doclify.io/) integration for [Nuxt](https://v3.nuxtjs.org)
 
-## Installation
 
-Install the package using [npm](https://www.npmjs.com) or [Yarn](https://yarnpkg.com/):
-```sh
-npm install @doclify/nuxt --production
+## Licence
 
-# or with yarn
+[MIT Licence](./LICENCE)
 
-yarn add @doclify/nuxt
-```
----
+<!-- Badges -->
 
-## License
-
-This repository is published under the [MIT](LICENSE) license.
+[npm-version-src]: https://img.shields.io/npm/v/@doclify/nuxt/latest.svg
+[npm-version-href]: https://npmjs.com/package/@doclify/nuxt
+[npm-downloads-src]: https://img.shields.io/npm/dm/@doclify/nuxt.svg
+[npm-downloads-href]: https://npmjs.com/package/@doclify/nuxt
+[codecov-src]: https://img.shields.io/codecov/c/github/doclify/doclify-nuxt.svg
+[codecov-href]: https://codecov.io/gh/doclify/doclify-nuxt
+[license-src]: https://img.shields.io/npm/l/@doclify/nuxt.svg
+[license-href]: https://npmjs.com/package/@doclify/nuxt

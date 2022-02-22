@@ -1,60 +1,51 @@
 {
   "name": "@doclify/nuxt",
-  "version": "2.0.2",
-  "description": "Doclify module for Nuxt.js",
-  "main": "lib/module.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/doclify/doclify-nuxt.git"
-  },
-  "homepage": "https://github.com/doclify/doclify-nuxt#readme",
-  "author": "Andrej Adamcik",
+  "version": "4.0.0",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "dev": "nuxt test/fixture",
-    "lint": "eslint lib test",
-    "test": "npm run lint && jest",
-    "release": "bash scripts/release.sh"
-  },
-  "files": [
-    "lib"
-  ],
+  "description": "Doclify integration for Nuxt",
+  "repository": "doclify/doclify-nuxt",
   "keywords": [
-    "doclify",
-    "javascript",
     "nuxt",
-    "nuxt.js",
-    "vue",
-    "vue.js"
+    "module",
+    "nuxt-module",
+    "doclify"
   ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+  },
   "dependencies": {
-    "@doclify/javascript": "^3.0.6",
-    "@doclify/lru-cache": "^1.0.0"
+    "@doclify/javascript": "^4.0.0-beta.0",
+    "@doclify/proxy": "^1.0.8",
+    "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
+    "defu": "^5.0.1"
   },
   "devDependencies": {
-    "@babel/core": "latest",
-    "@babel/preset-env": "latest",
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
-    "@nuxtjs/eslint-config": "latest",
-    "axios": "^0.19.2",
-    "babel-eslint": "latest",
-    "babel-jest": "latest",
-    "codecov": "latest",
-    "dotenv": "^8.2.0",
+    "@nuxt/module-builder": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@release-it/conventional-changelog": "4.1.0",
+    "@types/serve-static": "1.13.10",
     "eslint": "latest",
-    "eslint-config-standard": "latest",
-    "eslint-plugin-import": "latest",
-    "eslint-plugin-jest": "latest",
-    "eslint-plugin-node": "latest",
-    "eslint-plugin-promise": "latest",
-    "eslint-plugin-standard": "latest",
-    "eslint-plugin-vue": "latest",
-    "husky": "latest",
-    "jest": "latest",
-    "nuxt-edge": "latest"
+    "eslint-config-prettier": "^8.4.0",
+    "nuxt3": "latest",
+    "prettier": "2.5.1",
+    "release-it": "14.12.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

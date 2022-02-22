@@ -1,10 +1,11 @@
 {
-  "root": true,
-  "parserOptions": {
-    "parser": "babel-eslint",
-    "sourceType": "module"
-  },
   "extends": [
-    "@nuxtjs"
-  ]
+    "@nuxtjs/eslint-config-typescript",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "off"
+    ]
+  }
 }
