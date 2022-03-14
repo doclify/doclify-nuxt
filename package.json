@@ -26,7 +26,8 @@
     "prepack": "nuxt-module-build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "release": "release-it"
   },
   "dependencies": {
     "@doclify/javascript": "^4.0.0-beta.0",
