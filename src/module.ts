@@ -14,7 +14,7 @@ export default defineNuxtModule<ModuleOptions>({
     name: '@doclify/nuxt',
     configKey: 'doclify',
     compatibility: {
-      nuxt: '^2.0.0',
+      nuxt: '^3.0.0 || ^2.15.0',
       bridge: true,
     },
   },
