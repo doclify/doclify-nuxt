@@ -1,3 +1,10 @@
+### [4.1.1](https://github.com/doclify/doclify-nuxt/compare/v4.1.0...v4.1.1) (2022-03-16)
+
+
+### Bug Fixes
+
+* compatibility version ([d40d28c](https://github.com/doclify/doclify-nuxt/commit/d40d28c185e153b867574edb89052866ad0751e9))
+
 ## [4.1.0](https://github.com/doclify/doclify-nuxt/compare/v2.0.2...v4.1.0) (2022-03-14)
 
 
