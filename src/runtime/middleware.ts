@@ -22,18 +22,8 @@ const getProxy = (): DoclifyProxy => {
   return proxyInstance
 }
 
-export default async function(req: IncomingMessage, res: ServerResponse) {
+export default function(req: IncomingMessage, res: ServerResponse) {
   const proxy = getProxy()
 
-  await new Promise<void>((resolve, reject) => {
-    const next = (err?: unknown) => {
-      if (err) {
-        return reject(err)
-      }
-
-      return resolve()
-    }
-
-    return proxy.middleware(req, res, next)
-  })
+  return proxy.middleware(req, res)
 }
