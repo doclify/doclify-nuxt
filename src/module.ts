@@ -45,7 +45,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
 })
 
-declare module '#app' {
+declare module 'nuxt3/dist/app/nuxt' {
   interface NuxtApp {
     $doclify: Doclify
   }
