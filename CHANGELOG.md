@@ -1,3 +1,15 @@
+## [4.3.0](https://github.com/doclify/doclify-nuxt/compare/v4.2.0...v4.3.0) (2022-04-07)
+
+
+### Features
+
+* add types ([4338805](https://github.com/doclify/doclify-nuxt/commit/4338805a94b97d0950ea9a8975f57a25f08b8fcd))
+
+
+### Bug Fixes
+
+* types ([fcc0f43](https://github.com/doclify/doclify-nuxt/commit/fcc0f43edd3df967b3dcee3cbc0538d6e23af82e))
+
 ## [4.2.0](https://github.com/doclify/doclify-nuxt/compare/v4.1.1...v4.2.0) (2022-03-17)
 
 
