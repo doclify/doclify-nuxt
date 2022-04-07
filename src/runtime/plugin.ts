@@ -21,5 +21,9 @@ export default defineNuxtPlugin((nuxtApp: NuxtApp) => {
 
   const doclify = new Doclify(options)
 
-  nuxtApp.provide('doclify', doclify)
+  return {
+    provide: {
+      doclify
+    }
+  }
 })

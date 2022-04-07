@@ -1,8 +1,8 @@
 import { resolve } from 'path'
 import { fileURLToPath } from 'url'
-import { defineNuxtModule, addPlugin, addTemplate, addAutoImport, addServerMiddleware } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, addServerMiddleware } from '@nuxt/kit'
 import Doclify, { DoclifyOptions } from '@doclify/javascript'
-import DoclifyProxy, { DoclifyProxyOptions } from '@doclify/proxy'
+import { DoclifyProxyOptions } from '@doclify/proxy'
 import defu from 'defu'
 
 export interface ModuleOptions extends DoclifyOptions {
@@ -44,6 +44,12 @@ export default defineNuxtModule<ModuleOptions>({
     }
   },
 })
+
+declare module '#app' {
+  interface NuxtApp {
+    $doclify: Doclify
+  }
+}
 
 declare module '@nuxt/schema' {
   interface ConfigSchema {
