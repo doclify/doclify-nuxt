@@ -1,3 +1,10 @@
+## [4.5.0](https://github.com/doclify/doclify-nuxt/compare/v4.4.0...v4.5.0) (2022-04-13)
+
+
+### Features
+
+* upgrade @doclify/proxy ([8c69cfa](https://github.com/doclify/doclify-nuxt/commit/8c69cfa359f18727ab508ac9a500b18b9eaac7c4))
+
 ## [4.4.0](https://github.com/doclify/doclify-nuxt/compare/v4.3.0...v4.4.0) (2022-04-13)
 
 
