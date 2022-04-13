@@ -1,3 +1,10 @@
+## [4.4.0](https://github.com/doclify/doclify-nuxt/compare/v4.3.0...v4.4.0) (2022-04-13)
+
+
+### Features
+
+* allow different baseURL ([831ce3f](https://github.com/doclify/doclify-nuxt/commit/831ce3fb6596f176458f47fbb9120bc5c2054dfd))
+
 ## [4.3.0](https://github.com/doclify/doclify-nuxt/compare/v4.2.0...v4.3.0) (2022-04-07)
 
 
