@@ -9,6 +9,7 @@ const getProxy = (): DoclifyProxy => {
     const doclifyConfig = config.doclify
 
     const options = {
+      path: config.app.baseURL.replace(/\/$/, '') + '/doclify',
       ...doclifyConfig.proxy
     }
 

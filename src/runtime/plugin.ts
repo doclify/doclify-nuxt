@@ -9,14 +9,16 @@ export default defineNuxtPlugin((nuxtApp: NuxtApp) => {
     proxy: undefined
   }
 
+  const path = config.app.baseURL.replace(/\/$/, '') + '/doclify'
+
   if (!config.doclify.proxy) {
     options.url = options.url || config.DOCLIFY_URL
-  options.repository = options.repository || config.DOCLIFY_REPOSITORY
-  options.key = options.key || config.DOCLIFY_KEY
+    options.repository = options.repository || config.DOCLIFY_REPOSITORY
+    options.key = options.key || config.DOCLIFY_KEY
   } else if (process.client) {
-    options.url = '/doclify'
+    options.url = path
   } else {
-    options.url = `http://127.0.0.1:${process.env.PORT || 3000}/doclify`
+    options.url = `http://127.0.0.1:${process.env.PORT || 3000}${path}`
   }
 
   const doclify = new Doclify(options)
