@@ -1,3 +1,10 @@
+### [5.0.1](https://github.com/doclify/doclify-nuxt/compare/v5.0.0...v5.0.1) (2022-04-18)
+
+
+### Features
+
+* upgrade @doclify/javascript ([e08978d](https://github.com/doclify/doclify-nuxt/commit/e08978d627c890ce51c6b193c0a71f4758cda393))
+
 ## [5.0.0](https://github.com/doclify/doclify-nuxt/compare/v4.5.0...v5.0.0) (2022-04-18)
 
 
