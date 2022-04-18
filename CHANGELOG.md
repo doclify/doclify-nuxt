@@ -1,3 +1,10 @@
+### [5.0.3](https://github.com/doclify/doclify-nuxt/compare/v5.0.2...v5.0.3) (2022-04-18)
+
+
+### Bug Fixes
+
+* config ([bff40b5](https://github.com/doclify/doclify-nuxt/commit/bff40b5eb73f06b9832d6cbc499f242553590a45))
+
 ### [5.0.2](https://github.com/doclify/doclify-nuxt/compare/v5.0.1...v5.0.2) (2022-04-18)
 
 
