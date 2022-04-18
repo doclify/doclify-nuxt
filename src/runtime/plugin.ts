@@ -3,15 +3,15 @@ import { defineNuxtPlugin, NuxtApp, useRuntimeConfig } from '#app'
 import Doclify from '@doclify/javascript'
 
 export default defineNuxtPlugin(() => {
-  const config = useRuntimeConfig().public.doclify
+  const config = useRuntimeConfig()
   const options = {
-    ...config,
+    ...config.public.doclify,
     proxy: undefined
   }
 
   const path = config.app.baseURL.replace(/\/$/, '') + '/doclify'
 
-  if (config.proxy) {
+  if (config.public.doclify.proxy) {
     options.repository = null
     options.key = null
 
