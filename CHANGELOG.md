@@ -1,3 +1,10 @@
+### [5.0.2](https://github.com/doclify/doclify-nuxt/compare/v5.0.1...v5.0.2) (2022-04-18)
+
+
+### Bug Fixes
+
+* proxy options ([61db95b](https://github.com/doclify/doclify-nuxt/commit/61db95bbb24474795e77047d2195ad79b5ca1ab5))
+
 ### [5.0.1](https://github.com/doclify/doclify-nuxt/compare/v5.0.0...v5.0.1) (2022-04-18)
 
 
