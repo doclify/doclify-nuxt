@@ -1,6 +1,6 @@
 {
   "name": "@doclify/nuxt",
-  "version": "4.5.0",
+  "version": "5.0.0",
   "license": "MIT",
   "description": "Doclify integration for Nuxt",
   "repository": "doclify/doclify-nuxt",
