@@ -44,7 +44,7 @@ export default defineNuxtModule<ModuleOptions>({
       url: options.url,
       timeout: options.timeout,
       language: options.language,
-      proxy: options.proxy ?? {}
+      proxy: options.proxy
     })
 
     nuxt.options.runtimeConfig.public.doclify = defu(nuxt.options.runtimeConfig.public.doclify, {
@@ -53,6 +53,7 @@ export default defineNuxtModule<ModuleOptions>({
       url: options.url,
       timeout: options.timeout,
       language: options.language,
+      proxy: !!options.proxy
     })
 
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
@@ -89,6 +90,6 @@ declare module '@nuxt/schema' {
   }
 
   interface PublicRuntimeConfig {
-    doclify?: DoclifyOptions
+    doclify?: DoclifyOptions & { proxy: boolean }
   }
 }
