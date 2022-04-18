@@ -17,8 +17,13 @@ export default defineNuxtPlugin((nuxtApp: NuxtApp) => {
     options.key = options.key || config.DOCLIFY_KEY
   } else if (process.client) {
     options.url = path
+    options.repository = null
+    options.key = null
   } else {
-    options.url = `http://127.0.0.1:${process.env.PORT || 3000}${path}`
+    const port = process.env.DOCLIFY_PORT || process.env.PORT || 3000
+    options.url = `http://127.0.0.1:${port}${path}`
+    options.repository = null
+    options.key = null
   }
 
   const doclify = new Doclify(options)

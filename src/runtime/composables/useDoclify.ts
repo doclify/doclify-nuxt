@@ -3,7 +3,7 @@ import { useNuxtApp } from '#app'
 
 export const useDoclify = (): Doclify => {
   const nuxtApp = useNuxtApp()
-  const doclify: Doclify = nuxtApp.$doclify
+  const doclify = nuxtApp.$doclify
 
   return doclify
 }

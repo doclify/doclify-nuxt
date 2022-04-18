@@ -1,21 +1,26 @@
-import { IncomingMessage, ServerResponse } from 'http'
+import { defineEventHandler } from 'h3'
 import DoclifyProxy from '@doclify/proxy'
-import config from '#config'
+import { useRuntimeConfig } from '#nitro'
 
 let proxyInstance: DoclifyProxy | undefined
 
 const getProxy = (): DoclifyProxy => {
   if (!proxyInstance) {
+    const config = useRuntimeConfig()
     const doclifyConfig = config.doclify
 
+    const baseUrl = config.app.baseURL.replace(/\/$/, '')
+
     const options = {
-      path: config.app.baseURL.replace(/\/$/, '') + '/doclify',
       ...doclifyConfig.proxy
     }
 
-    options.url = options.url || doclifyConfig.url || config.DOCLIFY_URL
-    options.repository = options.repository || doclifyConfig.repository || config.DOCLIFY_REPOSITORY
-    options.key = options.key || doclifyConfig.key || config.DOCLIFY_KEY
+    // prepend base path
+    options.path = baseUrl + options.path
+
+    options.url = options.url || doclifyConfig.url
+    options.repository = options.repository || doclifyConfig.repository
+    options.key = options.key || doclifyConfig.key
 
     proxyInstance = new DoclifyProxy(options)
   }
@@ -23,8 +28,9 @@ const getProxy = (): DoclifyProxy => {
   return proxyInstance
 }
 
-export default function(req: IncomingMessage, res: ServerResponse) {
+
+export default defineEventHandler(({ req, res }) => {
   const proxy = getProxy()
 
   return proxy.middleware(req, res)
-}
+})
