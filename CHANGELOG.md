@@ -1,3 +1,15 @@
+## [5.1.0](https://github.com/doclify/doclify-nuxt/compare/v5.0.3...v5.1.0) (2022-05-12)
+
+
+### Features
+
+* update to nuxt rc.3 ([76df83c](https://github.com/doclify/doclify-nuxt/commit/76df83c36771f5ad77dc1e40f9e04c84738beb08))
+
+
+### Bug Fixes
+
+* schema ([f228b13](https://github.com/doclify/doclify-nuxt/commit/f228b13b1d42630cf0ed563455c56705f4ab1d60))
+
 ### [5.0.3](https://github.com/doclify/doclify-nuxt/compare/v5.0.2...v5.0.3) (2022-04-18)
 
 
