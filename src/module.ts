@@ -84,10 +84,10 @@ declare module '@nuxt/schema' {
   }
 
   interface PrivateRuntimeConfig {
-    doclify?: ModuleOptions
+    doclify: ModuleOptions
   }
 
   interface PublicRuntimeConfig {
-    doclify?: DoclifyOptions & { proxy: boolean }
+    doclify: DoclifyOptions & { proxy: boolean }
   }
 }
