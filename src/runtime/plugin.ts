@@ -1,6 +1,6 @@
+import Doclify from '@doclify/javascript'
 import { defineNuxtPlugin, NuxtApp, useRuntimeConfig } from '#app'
 
-import Doclify from '@doclify/javascript'
 
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()

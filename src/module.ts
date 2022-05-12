@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 import { fileURLToPath } from 'url'
-import { defineNuxtModule, addPlugin, addServerMiddleware } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, addServerHandler } from '@nuxt/kit'
 import Doclify, { DoclifyOptions } from '@doclify/javascript'
 import { DoclifyProxyOptions } from '@doclify/proxy'
 import defu from 'defu'
@@ -70,7 +70,7 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     if (options.proxy) {
-      addServerMiddleware({
+      addServerHandler({
         route: options.proxy.path + '/**',
         handler: resolve(runtimeDir, 'middleware')
       })
@@ -78,13 +78,11 @@ export default defineNuxtModule<ModuleOptions>({
   },
 })
 
-declare module 'nuxt3/dist/app/nuxt' {
+declare module '@nuxt/schema' {
   interface NuxtApp {
     $doclify: Doclify
   }
-}
 
-declare module '@nuxt/schema' {
   interface PrivateRuntimeConfig {
     doclify?: ModuleOptions
   }
