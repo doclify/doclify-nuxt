@@ -1,3 +1,10 @@
+## [5.2.0](https://github.com/doclify/doclify-nuxt/compare/v5.1.0...v5.2.0) (2022-09-06)
+
+
+### Features
+
+* update compatibility ([cad50eb](https://github.com/doclify/doclify-nuxt/commit/cad50ebfb1f0f056134489c6e5fb9eb64cf3c6aa))
+
 ## [5.1.0](https://github.com/doclify/doclify-nuxt/compare/v5.0.3...v5.1.0) (2022-05-12)
 
 
