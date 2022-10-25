@@ -30,7 +30,7 @@
     "release": "release-it"
   },
   "dependencies": {
-    "@doclify/javascript": "^4.0.0",
+    "@doclify/javascript": "^4.1.0",
     "@doclify/proxy": "^1.1.1",
     "@nuxt/kit": "^3.0.0-rc.3",
     "defu": "^5.0.1"
