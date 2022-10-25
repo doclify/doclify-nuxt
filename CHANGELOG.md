@@ -1,3 +1,10 @@
+## [5.4.0](https://github.com/doclify/doclify-nuxt/compare/v5.3.0...v5.4.0) (2022-10-25)
+
+
+### Features
+
+* upgrade sdk and nuxt ([7579ea7](https://github.com/doclify/doclify-nuxt/commit/7579ea72ff02a04a0ada84a27cfa79eb7d5294d2))
+
 ## [5.3.0](https://github.com/doclify/doclify-nuxt/compare/v5.2.0...v5.3.0) (2022-10-25)
 
 
