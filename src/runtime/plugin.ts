@@ -1,10 +1,9 @@
 import Doclify from '@doclify/javascript'
-import { defineNuxtPlugin, NuxtApp, useRuntimeConfig } from '#app'
-
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
-  const options = {
+  const options: Record<string, any> = {
     ...config.public.doclify,
     proxy: undefined
   }

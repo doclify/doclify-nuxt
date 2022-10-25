@@ -30,19 +30,20 @@
     "release": "release-it"
   },
   "dependencies": {
-    "@doclify/javascript": "^4.1.0",
+    "@doclify/javascript": "^5.0.1",
     "@doclify/proxy": "^1.1.1",
-    "@nuxt/kit": "^3.0.0-rc.3",
-    "defu": "^5.0.1"
+    "@nuxt/kit": "^3.0.0-rc.12",
+    "defu": "^6.1.0"
   },
   "devDependencies": {
-    "@nuxt/module-builder": "latest",
-    "@nuxtjs/eslint-config-typescript": "latest",
+    "@nuxt/module-builder": "^0.2.0",
+    "@nuxt/schema": "^3.0.0-rc.12",
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
     "@release-it/conventional-changelog": "4.1.0",
     "@types/serve-static": "1.13.10",
-    "eslint": "latest",
+    "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.4.0",
-    "nuxt": "^3.0.0-rc.3",
+    "nuxt": "^3.0.0-rc.12",
     "prettier": "2.5.1",
     "release-it": "14.12.4"
   },
