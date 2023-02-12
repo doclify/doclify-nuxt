@@ -39,13 +39,13 @@
     "@nuxt/module-builder": "^0.2.0",
     "@nuxt/schema": "^3.0.0-rc.12",
     "@nuxtjs/eslint-config-typescript": "^11.0.0",
-    "@release-it/conventional-changelog": "4.1.0",
+    "@release-it/conventional-changelog": "5.1.1",
     "@types/serve-static": "1.13.10",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.4.0",
     "nuxt": "^3.0.0-rc.12",
     "prettier": "2.5.1",
-    "release-it": "14.12.4"
+    "release-it": "15.6.0"
   },
   "publishConfig": {
     "access": "public"
