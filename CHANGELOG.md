@@ -1,3 +1,7 @@
+
+
+### [5.4.1](https://github.com/doclify/doclify-nuxt/compare/v5.4.0...v5.4.1) (2025-10-13)
+
 ## [5.4.0](https://github.com/doclify/doclify-nuxt/compare/v5.3.0...v5.4.0) (2022-10-25)
 
 
@@ -106,4 +110,3 @@
 
 * :tada: v4 ([978d2c8](https://github.com/doclify/doclify-nuxt/commit/978d2c8c9d9913f5c0dbc4ca1bcd5e6b03630775))
 * enable nuxt bridge ([7b1f560](https://github.com/doclify/doclify-nuxt/commit/7b1f560d2eb28253bed9ffb65fa6d2f0107aa93b))
-
