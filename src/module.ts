@@ -1,8 +1,7 @@
-import { resolve } from 'path'
-import { fileURLToPath } from 'url'
-import { defineNuxtModule, addPlugin, addServerHandler } from '@nuxt/kit'
-import Doclify, { DoclifyOptions } from '@doclify/javascript'
-import { DoclifyProxyOptions } from '@doclify/proxy'
+import { defineNuxtModule, addPlugin, addServerHandler, addImportsDir, createResolver } from '@nuxt/kit'
+import type { DoclifyOptions } from '@doclify/javascript'
+import type Doclify from '@doclify/javascript'
+import type { DoclifyProxyOptions } from '@doclify/proxy'
 import { defu } from 'defu'
 
 export interface ModuleOptions extends DoclifyOptions {
@@ -13,10 +12,6 @@ export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: '@doclify/nuxt',
     configKey: 'doclify',
-    compatibility: {
-      nuxt: '^3.0.0-rc.6 || ^2.15.0',
-      bridge: true
-    }
   },
   defaults: {
     repository: process.env.DOCLIFY_REPOSITORY ?? '',
@@ -31,22 +26,22 @@ export default defineNuxtModule<ModuleOptions>({
               type: process.env.DOCLIFY_PROXY_CACHE_DRIVER_TYPE as any ?? 'memory',
               redis: {
                 host: process.env.DOCLIFY_PROXY_CACHE_DRIVER_REDIS_HOST ?? '',
-                port: process.env.DOCLIFY_PROXY_CACHE_DRIVER_REDIS_PORT ?? 6379
-              }
-            }
+                port: process.env.DOCLIFY_PROXY_CACHE_DRIVER_REDIS_PORT ?? 6379,
+              },
+            },
 
           }
-        : undefined
-    }
+        : undefined,
+    },
   },
-  setup (options, nuxt) {
+  setup(options, nuxt) {
     nuxt.options.runtimeConfig.doclify = defu(nuxt.options.runtimeConfig.doclify, {
       key: options.key,
       repository: options.repository,
       url: options.url,
       timeout: options.timeout,
       language: options.language,
-      proxy: options.proxy
+      proxy: options.proxy,
     })
 
     nuxt.options.runtimeConfig.public.doclify = defu(nuxt.options.runtimeConfig.public.doclify, {
@@ -55,17 +50,14 @@ export default defineNuxtModule<ModuleOptions>({
       url: options.url,
       timeout: options.timeout,
       language: options.language,
-      proxy: !!options.proxy
+      proxy: !!options.proxy,
     })
 
-    const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
-    nuxt.options.build.transpile.push(runtimeDir)
+    const resolver = createResolver(import.meta.url)
+    nuxt.options.build.transpile.push(resolver.resolve('runtime'))
 
-    addPlugin(resolve(runtimeDir, 'plugin'))
-
-    nuxt.hook('autoImports:dirs', (dirs) => {
-      dirs.push(resolve(runtimeDir, 'composables'))
-    })
+    addPlugin(resolver.resolve('runtime/plugin'))
+    addImportsDir(resolver.resolve('runtime/composables'))
 
     nuxt.hook('listen', (server) => {
       process.env.DOCLIFY_PORT = (server.address() as any).port
@@ -74,10 +66,10 @@ export default defineNuxtModule<ModuleOptions>({
     if (options.proxy) {
       addServerHandler({
         route: options.proxy.path + '/**',
-        handler: resolve(runtimeDir, 'middleware')
+        handler: resolver.resolve('runtime/middleware'),
       })
     }
-  }
+  },
 })
 
 declare module '@nuxt/schema' {

@@ -1,4 +1,4 @@
-import Doclify from '@doclify/javascript'
+import type Doclify from '@doclify/javascript'
 import { useNuxtApp } from '#app'
 
 export const useDoclify = (): Doclify => {

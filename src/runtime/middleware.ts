@@ -12,7 +12,7 @@ const getProxy = (): DoclifyProxy => {
     const baseUrl = config.app.baseURL.replace(/\/$/, '')
 
     const options = {
-      ...doclifyConfig.proxy
+      ...doclifyConfig.proxy,
     }
 
     // prepend base path
@@ -28,9 +28,8 @@ const getProxy = (): DoclifyProxy => {
   return proxyInstance
 }
 
-
-export default defineEventHandler(({ req, res }) => {
+export default defineEventHandler((event) => {
   const proxy = getProxy()
 
-  return proxy.middleware(req, res)
+  return proxy.middleware(event.node.req, event.node.res)
 })
