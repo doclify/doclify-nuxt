@@ -1,5 +1,12 @@
 
 
+### [5.4.2](https://github.com/doclify/doclify-nuxt/compare/v5.4.1...v5.4.2) (2025-10-14)
+
+
+### Bug Fixes
+
+* port detect ([6461eec](https://github.com/doclify/doclify-nuxt/commit/6461eec327d58f6a6748b0c1384449fb2cd4d913))
+
 ### [5.4.1](https://github.com/doclify/doclify-nuxt/compare/v5.4.0...v5.4.1) (2025-10-13)
 
 ## [5.4.0](https://github.com/doclify/doclify-nuxt/compare/v5.3.0...v5.4.0) (2022-10-25)
