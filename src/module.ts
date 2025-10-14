@@ -59,8 +59,11 @@ export default defineNuxtModule<ModuleOptions>({
     addPlugin(resolver.resolve('runtime/plugin'))
     addImportsDir(resolver.resolve('runtime/composables'))
 
-    nuxt.hook('listen', (server) => {
-      process.env.DOCLIFY_PORT = (server.address() as any).port
+    nuxt.hook('listen', (_, listener) => {
+      if (listener && listener.url) {
+        const url = new URL(listener.url)
+        process.env.DOCLIFY_PORT = url.port
+      }
     })
 
     if (options.proxy) {
