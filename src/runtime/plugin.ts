@@ -5,7 +5,7 @@ export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
   const options: Record<string, any> = {
     ...config.public.doclify,
-    proxy: undefined
+    proxy: undefined,
   }
 
   const path = config.app.baseURL.replace(/\/$/, '') + '/doclify'
@@ -14,11 +14,11 @@ export default defineNuxtPlugin(() => {
     options.repository = null
     options.key = null
 
-    if (process.client) {
+    if (import.meta.client) {
       options.url = path
     } else {
       const port = process.env.DOCLIFY_PORT || process.env.PORT || 3000
-      options.url = `http://127.0.0.1:${port}${path}`
+      options.url = `http://localhost:${port}${path}`
     }
   }
 
@@ -26,7 +26,7 @@ export default defineNuxtPlugin(() => {
 
   return {
     provide: {
-      doclify
-    }
+      doclify,
+    },
   }
 })

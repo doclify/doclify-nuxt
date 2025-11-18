@@ -23,7 +23,8 @@ export default defineNuxtModule<ModuleOptions>({
       cache: process.env.NODE_ENV === 'production'
         ? {
             driver: {
-              type: process.env.DOCLIFY_PROXY_CACHE_DRIVER_TYPE as any ?? 'memory',
+
+              type: process.env.DOCLIFY_PROXY_CACHE_DRIVER_TYPE ?? 'memory',
               redis: {
                 host: process.env.DOCLIFY_PROXY_CACHE_DRIVER_REDIS_HOST ?? '',
                 port: process.env.DOCLIFY_PROXY_CACHE_DRIVER_REDIS_PORT ?? 6379,
@@ -32,7 +33,7 @@ export default defineNuxtModule<ModuleOptions>({
 
           }
         : undefined,
-    },
+    } as DoclifyProxyOptions,
   },
   setup(options, nuxt) {
     nuxt.options.runtimeConfig.doclify = defu(nuxt.options.runtimeConfig.doclify, {
@@ -51,7 +52,7 @@ export default defineNuxtModule<ModuleOptions>({
       timeout: options.timeout,
       language: options.language,
       proxy: !!options.proxy,
-    })
+    }) as any
 
     const resolver = createResolver(import.meta.url)
     nuxt.options.build.transpile.push(resolver.resolve('runtime'))
@@ -69,7 +70,7 @@ export default defineNuxtModule<ModuleOptions>({
     if (options.proxy) {
       addServerHandler({
         route: options.proxy.path + '/**',
-        handler: resolver.resolve('runtime/middleware'),
+        handler: resolver.resolve('runtime/server/middleware'),
       })
     }
   },
